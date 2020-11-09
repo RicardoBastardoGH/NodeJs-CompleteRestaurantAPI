@@ -5,6 +5,10 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var session = require('express-session');
 var FileStore = require('session-file-store')(session);
+var passport = require('passport');
+var authenticate = require('./authenticate')
+var config = require('./config');
+const url = config.mongoUrl;
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -21,8 +25,8 @@ const Leaders = require ('./models/leaders');
 
 const { Buffer } = require('buffer');
 
-const url = 'mongodb://localhost:27017/conFusion';
-const connect = mongoose.connect(url, {useNewUrlParser: true});
+//const url = 'mongodb://localhost:27017/conFusion';
+const connect = mongoose.connect(url, {useNewUrlParser: true, useUnifiedTopology: true});
 
 connect.then((db) => {
   console.log ('Connected correctly to the server');
@@ -40,45 +44,13 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 // cookie parser con llave secreta
 //app.use(cookieParser('12345-67890-09876-54321'));
-//Session
-app.use(session({
-  name: 'session-id',
-  secret: '12345-67890-09876-54321',
-  saveUnitialized: false,
-  resave: false,
-  store: new FileStore()
-}));
 
+
+app.use(passport.initialize());
+app.use('./users', usersRouter);
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-
-// AUTHENTICATION - before we can fetch to the public folder
-function auth(req, res, next) {
-  console.log(req.session);
-
-//  if (!req.signedCookies.user) {
-  if (!req.session.user) {
-    
-    var err = new Error('You are not authenticated!');
-    err.status = 401; //unauthorize access
-    // se retorna error para que sea devuelto por el error handler
-    return next(err);   
-  }
-  else {
-    if(req.session.user === 'authenticated') {
-      next();
-    }
-    else {
-      var err = new Error('You are not authenticated!');
-
-      err.status = 401; //unauthorize access
-      return next(err);
-    }
-  }
-}
-
-app.use(auth)
 
 app.use(express.static(path.join(__dirname, 'public')));
 
