@@ -56,9 +56,11 @@ exports.verifyUser = passport.authenticate('jwt', {session: false});
 exports.verifyAdmin = function(params, err, next) {
     if (params.user.admin){
       return next();
-    } else {
-      err = new Error('You are not authorized to perform this operations.');
-      err.status = 404;
-      return next(err);
+    } 
+    else {
+        console.log(params);
+        err = new Error('You are not authorized to perform this operations.');
+        err.status = 404;
+        return next(err);
     }
 };
