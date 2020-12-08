@@ -3,15 +3,22 @@ const mongoose = require('mongoose');
 var User = require('../models/user');
 var passport = require('passport');
 const  authenticate = require('../authenticate');
+const Users = require('../models/user');
 
 var router = express.Router();
 //router.use(bodyParser.json());
 router.use(express.json());
 
 /* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
+router.get('/', authenticate.verifyUser, authenticate.verifyAdmin, (req,res) => {
+  Users.find({})
+  .then((users) => {
+    res.statusCode = 200;
+        res.setHeader('Content-Type','aplicattion/json');
+        res.json(users);
+  }, (err) => next(err))
+  .catch((err) => next(err));
+})
 
 router.post('/singup', (req,res,next) => {
   //User.findOne({username: req.body.username})
@@ -66,4 +73,6 @@ router.get('/logout', (req,res) => {
     next(err);
   }
 })
+
+
 module.exports = router;
