@@ -1,0 +1,726 @@
+{
+	"info": {
+		"_postman_id": "a824abe4-0a60-4878-9586-2d491905dabf",
+		"name": "Coursera Node",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Dishes",
+			"item": [
+				{
+					"name": "http://localhost:3000/dishes",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmE5Y2FhNDQ4YWFlZTE0YjQyNzk1ZTciLCJpYXQiOjE2MDQ5NjQxODAsImV4cCI6MTYwNDk2Nzc4MH0.lRiomDLXH1z2OjJxv0IyNngCxnGySVUBUlHImSCNxwU",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/dishes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"dishes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/dishes",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmNmZDc2ZTkxYmU4NTM3NGNmOGFiZGQiLCJpYXQiOjE2MDc0NjQ1MzksImV4cCI6MTYwNzQ2ODEzOX0.0m35BzHVJQI801H7t9esgpzGF4yQeMFfTtf1C7VABg8"
+							},
+							{
+								"key": "origin",
+								"value": "https://localhost:3443",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/dishes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"dishes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/dishes",
+					"request": {
+						"method": "OPTIONS",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmE5Y2FhNDQ4YWFlZTE0YjQyNzk1ZTciLCJpYXQiOjE2MDQ5NjQxODAsImV4cCI6MTYwNDk2Nzc4MH0.lRiomDLXH1z2OjJxv0IyNngCxnGySVUBUlHImSCNxwU",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "https://localhost:3443/dishes",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "3443",
+							"path": [
+								"dishes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/dishes",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n      \"name\": \"Uthappizza2\",\r\n      \"image\": \"images/uthappizza.png\",\r\n      \"category\": \"mains\",\r\n      \"label\": \"Hot\",\r\n      \"price\": \"4.99\",\r\n      \"featured\": \"true\",\r\n      \"description\": \"A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.\",\r\n      \"comments\": [\r\n        {\r\n          \"rating\": 5,\r\n          \"comment\": \"Imagine all the eatables, living in conFusion!\",\r\n          \"author\": \"John Lemon\",\r\n          \"date\": \"2012-10-16T17:57:28.556094Z\"\r\n        },\r\n        {\r\n          \"rating\": 4,\r\n          \"comment\": \"Sends anyone to heaven, I wish I could get my mother-in-law to eat it!\",\r\n          \"author\": \"Paul McVites\",\r\n          \"date\": \"2014-09-05T17:57:28.556094Z\"\r\n        },\r\n        {\r\n          \"rating\": 3,\r\n          \"comment\": \"Eat it, just eat it!\",\r\n          \"author\": \"Michael Jaikishan\",\r\n          \"date\": \"2015-02-13T17:57:28.556094Z\"\r\n        },\r\n        {\r\n          \"rating\": 4,\r\n          \"comment\": \"Ultimate, Reaching for the stars!\",\r\n          \"author\": \"Ringo Starry\",\r\n          \"date\": \"2013-12-02T17:57:28.556094Z\"\r\n        },\r\n        {\r\n          \"rating\": 2,\r\n          \"comment\": \"It's your birthday, we're gonna party!\",\r\n          \"author\": \"25 Cent\",\r\n          \"date\": \"2011-12-02T17:57:28.556094Z\"\r\n        }\r\n      ]\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/dishes",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"dishes"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "comments",
+			"item": [
+				{
+					"name": "http://localhost:3000/dishes/:dishId/comments",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmE5ZjFmMjBjZTAwZjJkM2NhYzllNGYiLCJpYXQiOjE2MDQ5NzMwNzQsImV4cCI6MTYwNDk3NjY3NH0.kwCH7-nkYoQlXLRu5LBnYb7CHq3BObzACnmUAxXuOQE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"rating\": 5,\r\n    \"comment\": \"this is a comment\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/dishes/5fa9f35cbbacc93de4b78376/comments",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"dishes",
+								"5fa9f35cbbacc93de4b78376",
+								"comments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/dishes/:dishId/comments/:commentId",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmE5ZjFmMjBjZTAwZjJkM2NhYzllNGYiLCJpYXQiOjE2MDUwNDM0MzEsImV4cCI6MTYwNTA0NzAzMX0.aaPdYLrRXeW8HuwmKVA8upcgg5NR-v1NMOKfPy2yAGQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"comment\": \"this is a new comment 3\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/dishes/5faaded18151a40f9c45212e/comments/5faadefb8151a40f9c45212f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"dishes",
+								"5faaded18151a40f9c45212e",
+								"comments",
+								"5faadefb8151a40f9c45212f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/dishes/:dishId/comments",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmE5ZjFmMjBjZTAwZjJkM2NhYzllNGYiLCJpYXQiOjE2MDQ5NzMwNzQsImV4cCI6MTYwNDk3NjY3NH0.kwCH7-nkYoQlXLRu5LBnYb7CHq3BObzACnmUAxXuOQE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"rating\": 5,\r\n    \"comment\": \"this is a comment\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/dishes/5faaded18151a40f9c45212e/comments",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"dishes",
+								"5faaded18151a40f9c45212e",
+								"comments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/dishes/:dishId/comments/:commentId",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmE5ZjFmMjBjZTAwZjJkM2NhYzllNGYiLCJpYXQiOjE2MDQ5NzMwNzQsImV4cCI6MTYwNDk3NjY3NH0.kwCH7-nkYoQlXLRu5LBnYb7CHq3BObzACnmUAxXuOQE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"rating\": 5,\r\n    \"comment\": \"this is a comment\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/dishes/5faaded18151a40f9c45212e/comments",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"dishes",
+								"5faaded18151a40f9c45212e",
+								"comments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/dishes/:dishId/comments/:commentId Copy",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmE5ZjFmMjBjZTAwZjJkM2NhYzllNGYiLCJpYXQiOjE2MDUwNDE3OTIsImV4cCI6MTYwNTA0NTM5Mn0.1VlLzhirrg5Q_1oRhFlLO9MJo_NAUWW5nbZ0TY1kM9k",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"comment\": \"this is a new comment 3\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/dishes/5faaded18151a40f9c45212e/comments/5faadefb8151a40f9c45212f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"dishes",
+								"5faaded18151a40f9c45212e",
+								"comments",
+								"5faadefb8151a40f9c45212f"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "users / auth",
+			"item": [
+				{
+					"name": "http://localhost:3000/users/login",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{     \r\n    \"username\": \"ricardo2\",\r\n    \"password\": \"password\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/users/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/users/singup",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{     \r\n    \"username\": \"bastvai\",\r\n    \"password\": \"password\",\r\n    \"firstname\": \"Ricardo\",\r\n    \"lastname\": \"Bastardo\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/users/singup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"singup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/users",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmFhYWU2MDYyMmVkNjQxYzAyMWZmZTEiLCJpYXQiOjE2MDUwNDYwNDcsImV4cCI6MTYwNTA0OTY0N30.C_6gbTRKVxCdydPFjoUWl7XxZDlAhq8LD9eiH0-dQwo",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{     \r\n    \"username\": \"ricardo2\",\r\n    \"password\": \"password\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:3443/users/facebook/token",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "origin",
+								"value": "https://localhost:3443",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer EAAKoFwYOmwgBAJq1BIIOgaSRwAVRp7rD5bDcQ5AWIcP1rqvY1IuPQJnWAJdvkFwV30bhhikVOLksTw1HI76Vgrb0izuZB6y05V9kAPfZAY3x5IiHB2lCBde4OwC01tJN9y7Sf6ZCLVBXnWxJwyGjk9z7x7qqKZBAcyeSPfFfxgZDZD\"",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{     \r\n    \"username\": \"ricardo2\",\r\n    \"password\": \"password\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:3443/users/facebook/token",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "3443",
+							"path": [
+								"users",
+								"facebook",
+								"token"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "imageUpload",
+			"item": [
+				{
+					"name": "http://localhost:3000/imageUpload",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{     \r\n    \"username\": \"ricardo2\",\r\n    \"password\": \"password\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/users/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "favorites",
+			"item": [
+				{
+					"name": "https://localhost:3443/favorites",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmQwM2FmODYxZTkzODI2ODg3NTU2OWIiLCJpYXQiOjE2MDc0ODk0MzcsImV4cCI6MTYwNzQ5MzAzN30.7uuqBVhyZeES94PzIkrPsKgdDvh8mU2QhV11MUnCPcw",
+								"type": "text"
+							},
+							{
+								"key": "origin",
+								"value": "https://localhost:3443",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:3443/favorites",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "3443",
+							"path": [
+								"favorites"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:3443/favorites",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{     \r\n    \"username\": \"ricardo2\",\r\n    \"password\": \"password\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/users/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:3443/favorites",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmQwM2FmODYxZTkzODI2ODg3NTU2OWIiLCJpYXQiOjE2MDc0ODk0MzcsImV4cCI6MTYwNzQ5MzAzN30.7uuqBVhyZeES94PzIkrPsKgdDvh8mU2QhV11MUnCPcw",
+								"type": "text"
+							},
+							{
+								"key": "origin",
+								"value": "https://localhost:3443",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:3443/favorites",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "3443",
+							"path": [
+								"favorites"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:3443/favorites/:dishId",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmQwM2FmODYxZTkzODI2ODg3NTU2OWIiLCJpYXQiOjE2MDc0ODk0MzcsImV4cCI6MTYwNzQ5MzAzN30.7uuqBVhyZeES94PzIkrPsKgdDvh8mU2QhV11MUnCPcw",
+								"type": "text"
+							},
+							{
+								"key": "origin",
+								"value": "https://localhost:3443",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:3443/favorites/5fd03a6a61e938268875569a",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "3443",
+							"path": [
+								"favorites",
+								"5fd03a6a61e938268875569a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:3443/favorites/:dishId",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmQwM2FmODYxZTkzODI2ODg3NTU2OWIiLCJpYXQiOjE2MDc0ODk0MzcsImV4cCI6MTYwNzQ5MzAzN30.7uuqBVhyZeES94PzIkrPsKgdDvh8mU2QhV11MUnCPcw",
+								"type": "text"
+							},
+							{
+								"key": "origin",
+								"value": "https://localhost:3443",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:3443/favorites/5fd03a6a61e938268875569a",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "3443",
+							"path": [
+								"favorites",
+								"5fd03a6a61e938268875569a"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
