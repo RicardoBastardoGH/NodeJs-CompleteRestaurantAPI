@@ -79,7 +79,8 @@ Image Updload
 - https://localhost:3443/imageUpload
 
 
+## Postman Collection
 
-
+- file NodeJs-Restaurant.postman_collection.json
 
 
